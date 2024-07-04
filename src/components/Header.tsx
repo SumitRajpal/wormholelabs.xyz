@@ -46,14 +46,12 @@ const Header = () => {
   return (
     <>
       <header
-        className={` w-full px-3 md:px-8  fixed left-0 top-0 z-10 transition-all ${
-          isSticky ? " pt-3 md:pt-4 " : " pt-3 md:pt-8"
-        } `}
+        className={` w-full px-3 md:px-8  fixed left-0 top-0 z-10 transition-all ${isSticky ? " pt-3 md:pt-4 " : " pt-3 md:pt-8"
+          } `}
       >
         <div
-          className={`bg-white rounded-lg text-black flex px-6 lg:px-10 items-center justify-between ${
-            isSticky ? "py-3 " : " py-3 md:py-8 "
-          }`}
+          className={`bg-white rounded-lg text-black flex px-6 lg:px-10 items-center justify-between transition-all duration-500 ${isSticky ? "py-3 " : " py-3 md:py-8 "
+            }`}
         >
           <Logo className="block" />
           <ul className=" items-center gap-6 xl:gap-10 hidden lg:flex">
@@ -79,21 +77,18 @@ const Header = () => {
             onClick={handleToggleMenu}
           >
             <span
-              className={`ml-auto block h-0.5 w-3.5  rounded-sm bg-black transition-all lg:group-hover:w-5 ${
-                headerState.opened ? "mb-0 w-5 translate-y-1 rotate-45" : "mb-1"
-              }`}
+              className={`ml-auto block h-0.5 w-3.5  rounded-sm bg-black transition-all lg:group-hover:w-5 ${headerState.opened ? "mb-0 w-5 translate-y-1 rotate-45" : "mb-1"
+                }`}
             ></span>
             <span
-              className={`mb-1 block h-0.5 w-5 rounded-sm bg-black transition-all ${
-                headerState.opened && "opacity-0"
-              }`}
+              className={`mb-1 block h-0.5 w-5 rounded-sm bg-black transition-all ${headerState.opened && "opacity-0"
+                }`}
             ></span>
             <span
-              className={`ml-auto block h-0.5 w-3.5 rounded-sm bg-black transition-all lg:group-hover:w-5 ${
-                headerState.opened
-                  ? "mb-0 w-5 -translate-y-1 -rotate-45"
-                  : "mb-1"
-              }`}
+              className={`ml-auto block h-0.5 w-3.5 rounded-sm bg-black transition-all lg:group-hover:w-5 ${headerState.opened
+                ? "mb-0 w-5 -translate-y-1 -rotate-45"
+                : "mb-1"
+                }`}
             ></span>
           </button>
         </div>
